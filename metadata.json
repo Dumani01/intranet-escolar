@@ -1,0 +1,6 @@
+{
+  "name": "Intranet Escolar",
+  "description": "Prototipo funcional de Intranet Escolar con autenticación por roles, módulo académico y tablón de comunicados.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
