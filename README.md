@@ -1,49 +1,64 @@
-# Intranet Escolar - Colegio Dumani
+# Intranet Escolar — Sistema de Gestión Educativa e Integración con IA
 
-Una aplicación web SPA (Single Page Application) moderna, interactiva y responsiva diseñada para la gestión académica. Utiliza un diseño premium basado en **Glassmorphism**, efectos translúcidos, variables de color estandarizadas y transiciones de alto rendimiento, optimizado con HTML5, CSS3 vainilla y JavaScript.
+Prototipo funcional de una Intranet Escolar para instituciones educativas públicas. El sistema permite gestionar la información y comunicación entre cuatro perfiles de usuario: **Administración**, **Docentes**, **Estudiantes** y **Familias**.
 
-## 🚀 Características Principales
+Este proyecto está diseñado bajo estándares de código limpio y estructurado en Markdown (GFM) para maximizar la legibilidad y colaboración entre desarrolladores humanos y Agentes de Inteligencia Artificial Generativa.
 
-*   **Arquitectura SPA**: Enrutamiento interno rápido entre vistas sin recargar la página.
-*   **Diseño Premium**: Interfaz estética adaptada a las últimas tendencias de diseño (Glassmorphism, sombras suaves, degradados activos y micro-interacciones).
-*   **Persistencia Local**: Simulación de base de datos a través de `localStorage`. Los cambios en calificaciones, asistencia o usuarios se guardan de inmediato y persisten al recargar.
-*   **Iconografía Estilizada**: Integración moderna de Lucide Icons.
-*   **Notificaciones Toast**: Confirmaciones visuales interactivas para cada acción realizada.
+## Características Principales
 
----
+- **Control de Acceso Basado en Roles (RBAC)**: Sesión activa y vistas personalizadas según el rol autenticado.
+- **Módulo de Usuarios**: Alta, edición, filtrado y baja de usuarios con permisos específicos por rol.
+- **Módulo Académico**: Registro y visualización de calificaciones por asignatura, período lectivo y seguimiento de asistencia.
+- **Tablón de Comunicados**: Publicación de noticias, circulares y avisos oficiales del centro con filtros de visibilidad.
+- **Asistente e Integración con IA Generativa (Gemini API)**:
+  - Resumen automático de comunicados complejos para familias.
+  - Detección inteligente de anomalías en el control de asistencia.
+  - Redacción asistida de circulares oficiales para docentes y administración.
 
-## 🔑 Credenciales de Acceso Rápido (Demostración)
+## Requisitos de Instalación y Ejecución
 
-La pantalla de inicio incluye botones de **Acceso Rápido** para ingresar de forma inmediata a los distintos roles. Si prefieres ingresar manualmente, las credenciales son (contraseña por defecto `123` para todos):
+### Prerrequisitos
+- Node.js versión 18 o superior.
+- npm o bun instalados.
 
-| Rol | Usuario | Contraseña | Descripción |
-| :--- | :--- | :--- | :--- |
-| **Administrador** | `admin` | `123` | Control total, estadísticas escolares, creación/edición/eliminación de usuarios y publicación de anuncios escolares. |
-| **Profesor** | `roberto` | `123` | Profesor de Matemáticas y Física. Modificación de notas y pase de lista diario por fecha. |
-| **Profesor** | `carmen` | `123` | Profesora de Lengua e Historia. Modificación de notas y pase de lista diario por fecha. |
-| **Estudiante** | `ana` | `123` | Estudiante de 10° Grado A. Consulta de notas del periodo, porcentaje de asistencia, tareas asignadas y anuncios. |
-| **Estudiante** | `carlos` | `123` | Estudiante de 10° Grado A. |
-| **Estudiante** | `sofia` | `123` | Estudiante de 11° Grado B. |
+### Pasos de Instalación
 
----
+1. Clonar el repositorio:
+   git clone https://github.com/tu-usuario/intranet-escolar.git
 
-## 🛠️ Estructura del Proyecto
+2. Navegar al directorio del proyecto:
+   cd intranet-escolar
 
-```text
-├── index.html         # Estructura HTML5 principal de la SPA y modales
-├── styles.css         # Hoja de estilos del sistema de diseño y Glassmorphism
-├── js/
-│   ├── data.js        # Estructura de datos semilla e inicialización de LocalStorage
-│   └── app.js         # Controlador lógico, enrutamiento, renderizadores y eventos
-└── README.md          # Documentación del proyecto
-```
+3. Instalar las dependencias:
+   npm install
 
----
+4. Configurar variables de entorno:
+   Copiar `.env.example` a `.env` y configurar la clave `GEMINI_API_KEY` para habilitar funciones de IA Generativa.
 
-## 💻 Instrucciones de Uso
+5. Iniciar el servidor de desarrollo:
+   npm run dev
 
-1.  Abre el archivo [index.html](file:///c:/Users/HP8CZ/Desktop/bernny%20dumani/proyecto%20intranet/index.html) en tu navegador preferido.
-2.  Usa los botones de acceso rápido para probar los diferentes flujos:
-    *   **Paso 1 (Administrador)**: Entra como `admin`, dirígete a "Usuarios" y crea un nuevo estudiante (ej. "Juan Pérez").
-    *   **Paso 2 (Docente)**: Entra como `roberto` (profesor), selecciona tu asignatura e ingresa calificaciones para el estudiante recién creado o modifica las calificaciones existentes de "Ana Gómez". Haz clic en guardar.
-    *   **Paso 3 (Estudiante)**: Entra como `ana` y verifica que sus calificaciones y estadísticas de asistencia se han actualizado de forma instantánea de acuerdo con lo registrado por el docente.
+6. Abrir en el navegador:
+   Acceder a `http://localhost:3000`.
+
+## Ejemplo de Uso
+
+1. Seleccione un rol en la pantalla de inicio de sesión de prueba (ej. **Administrador**, **Docente**, **Estudiante** o **Familia**).
+2. Explore los módulos disponibles en el menú lateral de navegación según sus permisos.
+3. En el **Tablón de Comunicados**, utilice la función "Resumir con IA" para obtener una versión ejecutiva simplificada de los anuncios.
+4. En el **Módulo Académico**, alterne entre la vista de calificaciones y la gráfica de asistencia.
+
+## Estructura de Documentación
+
+Toda la documentación técnica del proyecto se encuentra en formato Markdown dentro del repositorio:
+
+- `README.md`: Presentación y guía rápida de uso.
+- `AGENTS.md`: Memoria del agente de IA y normas de colaboración.
+- `CONTRIBUTING.md`: Guía de contribución, flujo de trabajo con Git y Pull Requests.
+- `CHANGELOG.md`: Historial estructurado de versiones del proyecto.
+- `docs/arquitectura.md`: Decisiones arquitectónicas, stack y flujo de datos.
+- `docs/requerimientos.md`: Lista detallada de requerimientos funcionales y no funcionales.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulte el archivo de licencia para más detalles.
