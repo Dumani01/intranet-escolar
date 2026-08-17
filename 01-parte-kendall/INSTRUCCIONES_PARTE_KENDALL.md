@@ -3,7 +3,7 @@
 
 ## Rama
 
-`feature/jared-academico-comunicados`
+`feature/kendall-academico-comunicados`
 
 ## Archivos asignados
 
