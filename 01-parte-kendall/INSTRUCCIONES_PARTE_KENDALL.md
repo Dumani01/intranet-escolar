@@ -20,7 +20,7 @@ Esta parte contiene 1414 líneas de código. Copie solamente la carpeta `src` so
 ```powershell
 git add src/components/Navbar.tsx src/components/Sidebar.tsx src/components/AnnouncementsModule.tsx src/components/AcademicModule.tsx src/components/AttendanceChart.tsx
 git commit -m "feat: implement navigation announcements and academic modules"
-git push -u origin feature/jared-academico-comunicados
+git push -u origin feature/kendall-academico-comunicados
 ```
 
 No modifique ni agregue archivos pertenecientes a la parte del compañero.
